@@ -18,7 +18,7 @@ weatherForm.addEventListener('submit', (event) => {
     errorMessage.textContent = `You must provide an address`;
     return console.log(`You must provide an address`)
   }
-  fetch(`http://localhost:3000/weather?address=${encodeURI(address)}`)
+  fetch(`/weather?address=${encodeURI(address)}`)
     .then((response) => {
       return response.json()
     })
